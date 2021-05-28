@@ -1,0 +1,25 @@
+# Google Console 
+
+ https://console.cloud.google.com/home/dashboard?project=tezos-node-d07ff&_ga=2.179862372.1555311944.1622189260-1645262544.1622188688
+ 
+ console build is set for tezos node. blockchain hash stored on digital blockchain "XTZ"
+ 
+ https://console.cloud.google.com/home/activity?project=tezos-node-d07ff 
+ 
+# Project name
+
+tezos-node
+
+# Project ID
+
+tezos-node-d07ff
+
+# Project number
+
+812835703240
+
+cloud logging 50 GB : https://console.firebase.google.com/u/0/project/tezos-node-d07ff/settings/integrations/cloudlogging
+
+https://console.cloud.google.com/logs/query;query=resource.type%3D%22firebase_domain%22;timeRange=P7D;cursorTimestamp=2021-05-28T07:37:39Z?authuser=0&project=tezos-node-d07ff
+
+https://cloudlogging.app.goo.gl/JeVLFp8pdPXzPZXXA
