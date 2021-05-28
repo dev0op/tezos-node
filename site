@@ -1,0 +1,74 @@
+# Tezos node
+
+# Firebase console 
+
+
+https://firebase.google.com/docs/app-check/cloud-functions?authuser=0#add_support_to_a_function site link information page
+
+Firebase console : project id: tezos-node 
+
+# Firebase Admin SDK
+
+Service Account :
+firebase-adminsdk-ltnh2@tezos-node-d07ff.iam.gserviceaccount.com
+
+Admin SDK configuration snippet
+
+1. Display language :
+node.js 
+
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://tezos-node-d07ff-default-rtdb.firebaseio.com"
+});
+
+2. Display language : 
+java
+
+
+FileInputStream serviceAccount =
+  new FileInputStream("path/to/serviceAccountKey.json");
+
+FirebaseOptions options = new FirebaseOptions.Builder()
+  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+  .setDatabaseUrl("https://tezos-node-d07ff-default-rtdb.firebaseio.com")
+  .build();
+
+FirebaseApp.initializeApp(options);
+
+3. Display language : 
+python 
+
+
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("path/to/serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+
+4. Display language : 
+go
+
+
+import (
+  "fmt"
+  "context"
+
+  firebase "firebase.google.com/go"
+  "firebase.google.com/go/auth"
+
+  "google.golang.org/api/option"
+)
+
+opt := option.WithCredentialsFile("path/to/serviceAccountKey.json")
+app, err := firebase.NewApp(context.Background(), nil, opt)
+if err != nil {
+  return nil, fmt.Errorf("error initializing app: %v", err)
+}
+
+
